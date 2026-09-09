@@ -1,12 +1,22 @@
 :root {
     --primary-color: #FE724C;
     --primary-hover-color: #DF6442;
+    --accent-color: #fe4ce6;
     --text-color: #000000;
     --text-secondary-color: #5B5B5E;
+    --border-input-color: #aeaeb0;
+    --border-input-focus-color: #858586;
     --white-color: #FFFFFF;
     --separator-color: #D4D6E0;
+    height: 100%;
+}
+
+#root {
+    height: 100%;
 }
 
 body {
     font-family: "Open Sans", sans-serif;
+    height: 100%;
+    margin: 0;
 }

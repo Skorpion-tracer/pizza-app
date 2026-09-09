@@ -14,6 +14,10 @@
     background: var(--primary-hover-color);
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
 .accent {
     background: var(--primary-color);
 }

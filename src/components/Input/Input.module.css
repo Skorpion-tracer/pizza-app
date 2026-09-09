@@ -1,0 +1,61 @@
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+}
+
+.tooltip {
+    margin-bottom: 7px;
+}
+
+.input {
+    width: 100%;
+    outline: none;
+    min-height: 50px;
+    border-radius: 10px;
+    border: 2px solid var(--border-input-color);
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 20px;
+    opacity: 0.6;
+    transition: opacity 0.4s;
+}
+
+.input:hover {
+    opacity: 1;
+}
+
+.input:focus {
+    opacity: 1;
+    border-color: var(--border-input-focus-color);
+}
+
+.password {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.showPasswordButton {
+    position: absolute;
+    right: 20px;
+    border: none;
+    width: 25px;
+    height: 25px;
+    background: none;
+}
+
+.eyeIcon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.6;
+    transition: opacity 0.4s;
+}
+
+.eyeIcon:hover {
+    opacity: 1;
+}
