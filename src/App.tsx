@@ -1,11 +1,15 @@
-import './App.css';
+import './index.css';
 import Button from "./components/Button/Button.tsx";
+import {MouseEvent} from "react";
 
 function App() {
+    const addCounter = (e: MouseEvent) => {
+        console.log(e);
+    }
 
     return (
         <>
-            <Button>Кнопка</Button>
+            <Button onClick={addCounter}>Кнопка</Button>
         </>
     );
 }

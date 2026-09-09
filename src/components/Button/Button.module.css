@@ -5,16 +5,15 @@
     cursor: pointer;
     transition: background 0.25s;
     font-size: 16px;
+    background: var(--primary-color);
     border: none;
-    color: #fff;
-    margin-right: auto;
+    color: var(--white-color);
 }
 
 .button:hover {
-    background: aquamarine;
-    color: #000000;
+    background: var(--primary-hover-color);
 }
 
 .accent {
-    background: #6363de;
+    background: var(--primary-color);
 }
