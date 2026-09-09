@@ -1,15 +1,11 @@
 import './index.css';
-import Button from "./components/Button/Button.tsx";
-import {MouseEvent} from "react";
+import Authorization from "./components/Authorization/Authorization.tsx";
 
 function App() {
-    const addCounter = (e: MouseEvent) => {
-        console.log(e);
-    }
 
     return (
         <>
-            <Button onClick={addCounter}>Кнопка</Button>
+            <Authorization/>
         </>
     );
 }
