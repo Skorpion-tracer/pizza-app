@@ -1,9 +1,9 @@
 import styles from "./Input.module.css";
 import cn from 'classnames';
 import {InputProps} from "./Input.props.ts";
-import {useState} from "react";
+import {forwardRef, useState} from "react";
 
-export function Input({ title, placeholder, visiblePasswordChanger = false, type }: InputProps) {
+const Input = forwardRef<HTMLInputElement, InputProps>(function Input({ placeholder, visiblePasswordChanger = false, type, header, ...props }, ref) {
     const [ visiblePassword, setVisiblePassword ] = useState(false);
 
     const showPassword = () => {
@@ -13,18 +13,20 @@ export function Input({ title, placeholder, visiblePasswordChanger = false, type
     return (
         <div className={cn(styles.inputContainer)}>
             {
-                title &&
-                <p className={cn(styles.tooltip)}>{title}</p>
+                header &&
+                <p className={cn(styles.tooltip)}>{header}</p>
             }
             {visiblePasswordChanger ?
                 <div className={cn(styles.password)}>
-                    <input className={cn(styles.input)} placeholder={placeholder} type={visiblePassword ? "text" : type}/>
+                    <input ref={ref} className={cn(styles.input)} placeholder={placeholder} type={visiblePassword ? "text" : type} {...props}/>
                     <button className={cn(styles.showPasswordButton)} onClick={showPassword}>
                         <img className={cn(styles.eyeIcon)} src="/eye.svg" alt="Показать пароль"/>
                     </button>
                 </div> :
-                <input className={cn(styles.input)} placeholder={placeholder} type={type}/>
+                <input ref={ref} className={cn(styles.input)} placeholder={placeholder} type={type} {...props}/>
             }
         </div>
     );
-}
+});
+
+export default Input;

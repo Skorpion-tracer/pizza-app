@@ -15,6 +15,7 @@
     min-height: 50px;
     border-radius: 10px;
     border: 2px solid var(--border-input-color);
+    box-shadow: 15px 20px 45px 0 rgba(233, 233, 233, 0.25);
     padding: 20px;
     box-sizing: border-box;
     font-size: 20px;

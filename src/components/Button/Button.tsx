@@ -3,13 +3,11 @@ import type {ButtonProps} from "./Button.props.ts";
 import cn from "classnames";
 import {ButtonAppearance} from "./ButtonAppearance.ts";
 
-function Button({ children, className, appearance = ButtonAppearance.standard, ...props }: ButtonProps) {
+function Button({ children, className, appearance = ButtonAppearance.small, ...props }: ButtonProps) {
     return (
-        <button className={cn(
+        <button className={cn(styles.button, styles.accent,
             {
-                [styles.button]: appearance === ButtonAppearance.standard,
-                [styles.accent]: appearance === ButtonAppearance.standard,
-                [styles.uppercase]: appearance === ButtonAppearance.uppercase,
+                [styles.big]: appearance === ButtonAppearance.big,
             }, className)} {...props}>
             {children}
         </button>

@@ -1,6 +1,6 @@
-import {HTMLProps} from "react";
+import {InputHTMLAttributes} from "react";
 
-export interface InputProps extends HTMLProps<HTMLInputElement> {
-    title?: string;
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+    header?: string;
     visiblePasswordChanger?: boolean;
 }

@@ -1,4 +1,4 @@
 export enum ButtonAppearance {
-    standard = 'standard',
-    uppercase = 'uppercase',
+    small = 'small',
+    big = 'big',
 }

@@ -12,7 +12,8 @@
   "dependencies": {
     "classnames": "^2.5.1",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.3"
   },
   "devDependencies": {
     "@getresponse/oxlint-config": "^1.2.0",
