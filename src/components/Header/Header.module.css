@@ -1,0 +1,8 @@
+.header {
+    font-size: 20px;
+    color: var(--text-color);
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+}

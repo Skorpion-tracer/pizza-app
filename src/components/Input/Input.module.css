@@ -32,7 +32,11 @@
     border-color: var(--border-input-focus-color);
 }
 
-.password {
+.inputWithImage {
+    padding-left: 50px;
+}
+
+.inputContainer {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -59,4 +63,11 @@
 
 .eyeIcon:hover {
     opacity: 1;
+}
+
+.iconInput {
+    position: absolute;
+    left: 20px;
+    width: 25px;
+    height: 25px;
 }

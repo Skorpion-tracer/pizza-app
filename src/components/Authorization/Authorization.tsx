@@ -4,6 +4,7 @@ import Button from "../Button/Button.tsx";
 import {ButtonAppearance} from "../Button/ButtonAppearance.ts";
 import {SubmitEvent} from "react";
 import Input from "../Input/Input.tsx";
+import {Header} from "../Header/Header.tsx";
 
 function Authorization() {
 
@@ -18,7 +19,7 @@ function Authorization() {
             <div className={cn(styles.separator)}/>
 
             <div className={cn(styles.authorization)}>
-                <h1 className={cn(styles.title)}>Вход</h1>
+                <Header title="Вход"></Header>
                 <form className={cn(styles.authorizationForm)} onSubmit={submit}>
                     <Input header={"Ваш email"} type="email" placeholder={"Email"}/>
                     <Input header={"Ваш пароль"} type="password" placeholder={"Пароль"} visiblePasswordChanger={true}/>

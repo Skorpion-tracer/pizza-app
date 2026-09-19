@@ -1,0 +1,7 @@
+.headerMenu {
+    display: grid;
+    grid-template-columns: auto 20rem;
+    width: 80%;
+    align-items: center;
+    gap: 16px;
+}
