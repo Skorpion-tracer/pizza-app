@@ -107,9 +107,8 @@ p {
     height: 35px;
 }
 
-.rightColumn {
+.content {
     width: 100%;
-    padding: 40px;
-    background-color: rgb(213 210 210 / 0.21);
+    padding: 40px 0;
 }
 

@@ -30,7 +30,7 @@ export function Layout() {
                     <span>Выход</span>
                 </Button>
             </div>
-            <div className={cn(styles.rightColumn)}>
+            <div className={cn(styles.content)}>
                 <Outlet/>
             </div>
         </div>

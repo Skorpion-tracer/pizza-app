@@ -13,12 +13,14 @@
     width: 100%;
     outline: none;
     min-height: 50px;
+    min-width: 256px;
     border-radius: 10px;
     border: 2px solid var(--border-input-color);
     box-shadow: 15px 20px 45px 0 rgba(233, 233, 233, 0.25);
+    background-color: #FCFCFD;
     padding: 20px;
     box-sizing: border-box;
-    font-size: 20px;
+    font-size: 14px;
     opacity: 0.6;
     transition: opacity 0.4s;
 }
