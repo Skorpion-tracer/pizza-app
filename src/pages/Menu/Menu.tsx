@@ -12,7 +12,7 @@ export function Menu() {
                 <Input image="/menu.svg" placeholder="Введите блюдо или состав"/>
             </header>
             <div className={cn(styles.productsContainer)}>
-                <Card name="Блюдо1" price={13} currency="Р" description="Блюдо1 описание" image="/Food.PNG" rating={5.4}/>
+                <Card name="Блюдо1" price={300} currency="Р" description="Блюдо1 описание" image="/Food.PNG" rating={5.4}/>
                 <Card name="Блюдо1" price={13} currency="Р" description="Блюдо1 описание" image="/Food.PNG" rating={5.4}/>
                 <Card name="Блюдо1" price={13} currency="Р" description="Блюдо1 описание" image="/Food.PNG" rating={5.4}/>
                 <Card name="Блюдо1" price={13} currency="Р" description="Блюдо1 описание" image="/Food.PNG" rating={5.4}/>
