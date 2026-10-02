@@ -19,7 +19,7 @@ function Authorization() {
             <div className={cn(styles.separator)}/>
 
             <div className={cn(styles.authorization)}>
-                <Headling title="Вход"></Headling>
+                <Headling>Вход</Headling>
                 <form className={cn(styles.authorizationForm)} onSubmit={submit}>
                     <Input header={"Ваш email"} type="email" placeholder={"Email"}/>
                     <Input header={"Ваш пароль"} type="password" placeholder={"Пароль"} visiblePasswordChanger={true}/>

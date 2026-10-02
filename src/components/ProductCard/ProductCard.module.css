@@ -1,7 +1,10 @@
+.link {
+    text-decoration: none;
+}
+
 .card {
     padding: 18px;
     width: 500px;
-    /*min-height: 310px;*/
     position: relative;
     display: flex;
     flex-direction: column;
@@ -9,7 +12,7 @@
     justify-content: flex-start;
     border-radius: 40px;
     background-color: var(--white-color);
-    filter: drop-shadow(0 0 30px rgb(183, 183, 183, 0.25));
+    filter: drop-shadow(0 0 10px rgb(255 157 157 / 0.57));
 }
 
 .mainBackCard {
@@ -32,6 +35,23 @@
     z-index: -1;
 }
 
+.buttonBuy {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.imgBuy {
+    width: 30px;
+    height: 30px;
+}
+
 .priceContainer {
     border-radius: 30px;
     background-color: var(--white-color);
@@ -47,10 +67,12 @@
 .price {
     font-size: 20px;
     color: var(--text-color);
+    text-decoration: none;
 }
 
 .currency {
     color: var(--primary-color);
+    text-decoration: none;
 }
 
 .ratingContainer {
@@ -72,6 +94,7 @@
     font-size: 16px;
     font-weight: 600;
     color: var(--text-color);
+    text-decoration: none;
 }
 
 .ratingImg {
@@ -95,6 +118,7 @@
     min-width: 0;
     color: var(--text-color);
     font-size: 20px;
+    font-weight: 700;
     display: -webkit-box;
     -webkit-line-clamp: 2; /* сколько строк показывать */
     -webkit-box-orient: vertical;
