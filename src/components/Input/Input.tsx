@@ -6,6 +6,7 @@ import {forwardRef, useState} from "react";
 const Input = forwardRef<HTMLInputElement, InputProps>(function Input({
     visiblePasswordChanger = false,
     header,
+    name,
     image,
     ...props
 }, ref) {
@@ -16,15 +17,15 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input({
     };
 
     return (
-        <div className={cn(styles.inputContainer)}>
+        <div className={cn(styles.inputMainContainer)}>
             {
                 header &&
                 <p className={cn(styles.tooltip)}>{header}</p>
             }
             {visiblePasswordChanger ?
                 <div className={cn(styles.inputContainer)}>
-                    <input ref={ref} className={cn(styles.input)} type={visiblePassword ? "text" : props.type} {...props}/>
-                    <button className={cn(styles.showPasswordButton)} onClick={showPassword}>
+                    <input ref={ref} name={name} className={cn(styles.input)} type={visiblePassword ? "text" : props.type} {...props}/>
+                    <button type="button" className={cn(styles.showPasswordButton)} onClick={showPassword}>
                         <img className={cn(styles.eyeIcon)} src="/eye.svg" alt="Показать пароль"/>
                     </button>
                 </div> :
@@ -33,7 +34,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input({
                         image &&
                         <img className={cn(styles.iconInput)} src={image} alt="иконка"/>
                     }
-                    <input ref={ref} className={cn(styles.input, image && styles.inputWithImage)}  {...props}/>
+                    <input ref={ref} name={name} className={cn(styles.input, image && styles.inputWithImage)}  {...props}/>
                 </div>
             }
         </div>

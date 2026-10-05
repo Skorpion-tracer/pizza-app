@@ -4,4 +4,5 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     header?: string;
     visiblePasswordChanger?: boolean;
     image?: string;
+    name?: string;
 }
