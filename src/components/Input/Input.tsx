@@ -24,7 +24,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input({
             }
             {visiblePasswordChanger ?
                 <div className={cn(styles.inputContainer)}>
-                    <input ref={ref} name={name} className={cn(styles.input)} type={visiblePassword ? "text" : props.type} {...props}/>
+                    <input ref={ref} name={name} className={cn(styles.input)} {...props} type={visiblePassword ? "text" : props.type}/>
                     <button type="button" className={cn(styles.showPasswordButton)} onClick={showPassword}>
                         <img className={cn(styles.eyeIcon)} src="/eye.svg" alt="Показать пароль"/>
                     </button>

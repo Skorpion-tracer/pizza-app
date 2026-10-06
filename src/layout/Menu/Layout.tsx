@@ -2,26 +2,32 @@ import {NavLink, Outlet, useNavigate} from "react-router-dom";
 import styles from "./Layout.module.css";
 import cn from "classnames";
 import Button from "../../components/Button/Button.tsx";
-import {useDispatch} from "react-redux";
-import {AppDispatch} from "../../store/store.ts";
-import {userActions} from "../../store/user.slice.ts";
+import {useDispatch, useSelector} from "react-redux";
+import {AppDispatch, RootState} from "../../store/store.ts";
+import {getProfile, userActions} from "../../store/user.slice.ts";
+import {useEffect} from "react";
 
 export function Layout() {
 
     const navigate = useNavigate();
     const dispatch = useDispatch<AppDispatch>();
+    const profile = useSelector((s: RootState) => s.user.profile);
 
     const logout = () => {
         dispatch(userActions.logout());
         navigate('/auth/login');
     }
 
+    useEffect(() => {
+        dispatch(getProfile());
+    }, [dispatch])
+
     return (
         <div className={cn(styles.layoutMenu)}>
             <div className={cn(styles.navigationPanel)}>
                 <img className={cn(styles.avatar)} src="/avatar.png" alt="Аватар"/>
-                <h2>Имя пользователя</h2>
-                <p>user@email.ru</p>
+                <h2>{profile?.name}</h2>
+                <p>{profile?.email}</p>
                 <div className={cn(styles.navigationButtons)}>
                     <NavLink to="/" className={({isActive}) => cn(styles.link, {
                         [styles.linkActive]: isActive,
