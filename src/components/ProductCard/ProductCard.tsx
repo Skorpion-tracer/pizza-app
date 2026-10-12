@@ -5,9 +5,9 @@ import {Link} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {AppDispatch} from "../../store/store.ts";
 import {cartActions} from "../../store/cart.slice.ts";
-import { MouseEvent} from "react";
+import {memo, MouseEvent} from "react";
 
-export function ProductCard({ id, name, price, currency, description, rating, image }: ProductCardProps) {
+export const ProductCard = memo(({ id, name, price, currency, description, rating, image }: ProductCardProps) => {
 
     const dispatch = useDispatch<AppDispatch>();
 
@@ -40,4 +40,4 @@ export function ProductCard({ id, name, price, currency, description, rating, im
             </div>
         </Link>
     );
-}
+});

@@ -1,0 +1,97 @@
+.card {
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 40px;
+    background: none;
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+
+.price {
+    font-size: 20px;
+    color: var(--primary-color);
+    text-decoration: none;
+    text-align: left;
+    font-weight: 600;
+}
+
+.infoProductContainer {
+    flex: 1;
+    min-width: 0;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.nameProduct {
+    width: 100%;
+    min-width: 0;
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* сколько строк показывать */
+    -webkit-box-orient: vertical;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow-wrap: anywhere;
+}
+
+.countContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    gap: 20px;
+}
+
+.count {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+.buttonCount {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.buttonPlus {
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--white-color);
+    filter: drop-shadow(0px 8px 10px rgb(252 178 131 / 0.75));
+}
+
+.buttonMinus {
+    background: none;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.buttonRemove {
+    background: none;
+    border: none;
+    padding: 7px;
+    color: var(--primary-color);
+}
