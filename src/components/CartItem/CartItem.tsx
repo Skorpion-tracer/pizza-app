@@ -28,7 +28,7 @@ export const CartItem = memo((props: CartItemProps) => {
 
             <div className={styles.infoProductContainer}>
                 <span className={styles.nameProduct}>{props.name}</span>
-                <span className={styles.price}>{props.price}</span>
+                <span className={styles.price}>{props.price}&nbsp;₽</span>
             </div>
 
             <div className={styles.countContainer}>

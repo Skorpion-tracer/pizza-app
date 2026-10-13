@@ -13,6 +13,7 @@
     height: 150px;
     object-fit: cover;
     border-radius: 30px;
+    filter: drop-shadow(0px 0 10px rgb(252 178 131 / 0.75));
 }
 
 
@@ -27,7 +28,7 @@
 .infoProductContainer {
     flex: 1;
     min-width: 0;
-    margin: 10px;
+    margin: 10px 10px 10px 30px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
